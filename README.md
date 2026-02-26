@@ -18,6 +18,25 @@ Inspired by [everything-claude-code](https://github.com/affaan-m/everything-clau
 
 This installs agents, skills, commands, and hooks automatically.
 
+#### Choosing the Right Scope
+
+The plugin can be installed at different scopes depending on your setup:
+
+| Scope | Flag | Where the setting is stored | Best for |
+|-------|------|-----------------------------|----------|
+| `user` | default | `~/.claude/settings.json` | **PHP-only developers.** The plugin is available in all your projects. |
+| `project` | `--scope project` | `.claude/settings.json` (committed to git) | **Teams using Claude Code.** Every team member gets the plugin automatically. |
+| `local` | `--scope local` | `.claude/settings.local.json` (gitignored) | **Solo Claude Code user in a team.** Plugin is active in this project but doesn't affect teammates. |
+
+**How to choose:**
+
+- You work only on PHP projects → install with default `user` scope
+- You work on PHP, Go, Rust, etc. → install with `project` or `local` scope in your PHP projects only
+- Your whole team uses Claude Code → install with `project` scope so it's shared via git
+- You're the only Claude Code user on the team → install with `local` scope
+
+Hooks are safe at any scope: they only trigger on `*.php` files and check for tools (`vendor/bin/...`) before running.
+
 ### Step 2: Install Rules
 
 Claude Code plugins cannot distribute rules automatically. Install them manually:
@@ -27,11 +46,16 @@ Claude Code plugins cannot distribute rules automatically. Install them manually
 git clone https://github.com/ekut/claude-code-php-toolkit.git
 cd claude-code-php-toolkit
 
-# Run the installer
+# Run the installer (installs to ~/.claude/rules/ — global scope)
 ./install.sh
 ```
 
-This copies rules to `~/.claude/rules/common/` and `~/.claude/rules/php/`.
+This copies rules to `~/.claude/rules/common/` and `~/.claude/rules/php/`. Rules installed this way apply to all projects. If you want rules only in a specific project, copy them to your project's `.claude/rules/` instead:
+
+```bash
+# Project-scoped rules (alternative)
+cp -r claude-code-php-toolkit/rules/ /path/to/your/project/.claude/rules/
+```
 
 ### Step 3: Start Using
 
