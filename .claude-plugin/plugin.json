@@ -26,6 +26,12 @@
     "./agents/php-reviewer.md",
     "./agents/php-tdd-guide.md",
     "./agents/php-security-reviewer.md",
-    "./agents/php-build-resolver.md"
+    "./agents/php-build-resolver.md",
+    "./agents/php-architect.md",
+    "./agents/php-planner.md",
+    "./agents/php-database-reviewer.md",
+    "./agents/php-doc-updater.md",
+    "./agents/php-refactor-cleaner.md",
+    "./agents/php-e2e-runner.md"
   ]
 }

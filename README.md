@@ -77,7 +77,7 @@ Customize it for your project's specific needs.
 
 ## What's Included
 
-### Agents (4)
+### Agents (10)
 
 | Agent | Description |
 |-------|-------------|
@@ -85,6 +85,12 @@ Customize it for your project's specific needs.
 | [php-tdd-guide](agents/php-tdd-guide.md) | TDD specialist — Red-Green-Refactor with PHPUnit and Pest |
 | [php-security-reviewer](agents/php-security-reviewer.md) | Security audit — OWASP Top 10, SQL injection, XSS, CSRF |
 | [php-build-resolver](agents/php-build-resolver.md) | Composer & PHP build error resolution |
+| [php-architect](agents/php-architect.md) | System architecture — DDD, hexagonal, CQRS, scalability |
+| [php-planner](agents/php-planner.md) | Feature planning — phased implementation, risks, deployment |
+| [php-database-reviewer](agents/php-database-reviewer.md) | Database review — schemas, migrations, queries, ORM (MySQL & PostgreSQL) |
+| [php-doc-updater](agents/php-doc-updater.md) | Documentation — PHPDoc, codemaps, API stubs |
+| [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
+| [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
 ### Skills (4)
 
