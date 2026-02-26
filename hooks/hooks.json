@@ -1,26 +1,21 @@
 {
-  "hooks": [
-    {
-      "id": "php-cs-fixer-on-edit",
-      "description": "Run PHP-CS-Fixer on PHP files after editing",
-      "event": "PostToolUse",
-      "matcher": {
-        "tool": ["Edit", "Write"],
-        "filePattern": "*.php"
-      },
-      "command": "if [ -f vendor/bin/php-cs-fixer ]; then vendor/bin/php-cs-fixer fix \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null; elif [ -f vendor/bin/pint ]; then vendor/bin/pint \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null; fi",
-      "timeout": 10000
-    },
-    {
-      "id": "phpstan-on-edit",
-      "description": "Run PHPStan on PHP files after editing",
-      "event": "PostToolUse",
-      "matcher": {
-        "tool": ["Edit", "Write"],
-        "filePattern": "*.php"
-      },
-      "command": "if [ -f vendor/bin/phpstan ]; then vendor/bin/phpstan analyse \"$CLAUDE_FILE_PATH\" --no-progress --error-format=raw 2>/dev/null; fi",
-      "timeout": 30000
-    }
-  ]
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -q '\\.php$'; then if [ -f vendor/bin/php-cs-fixer ]; then vendor/bin/php-cs-fixer fix \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null; elif [ -f vendor/bin/pint ]; then vendor/bin/pint \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null; fi; fi",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -q '\\.php$'; then if [ -f vendor/bin/phpstan ]; then vendor/bin/phpstan analyse \"$CLAUDE_FILE_PATH\" --no-progress --error-format=raw 2>/dev/null; fi; fi",
+            "timeout": 30000
+          }
+        ]
+      }
+    ]
+  }
 }
