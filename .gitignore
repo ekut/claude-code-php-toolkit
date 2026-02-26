@@ -1,0 +1,36 @@
+# Dependencies
+vendor/
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# PHP
+*.phar
+composer.lock
+
+# Testing
+.phpunit.result.cache
+.phpunit.cache/
+coverage/
+.pest/
+
+# Static analysis
+phpstan-baseline.neon
+psalm-baseline.xml
+
+# Build artifacts
+*.cache

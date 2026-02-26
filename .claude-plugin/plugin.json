@@ -1,0 +1,31 @@
+{
+  "name": "claude-code-php-toolkit",
+  "version": "0.1.0",
+  "description": "Production-ready agents, skills, commands, hooks, and rules for PHP development with Claude Code.",
+  "author": {
+    "name": "claude-code-php-toolkit contributors"
+  },
+  "homepage": "https://github.com/ekut/claude-code-php-toolkit",
+  "repository": "https://github.com/ekut/claude-code-php-toolkit",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "php",
+    "agents",
+    "skills",
+    "hooks",
+    "rules",
+    "phpunit",
+    "pest",
+    "phpstan",
+    "composer",
+    "psr"
+  ],
+  "skills": ["./skills/", "./commands/"],
+  "agents": [
+    "./agents/php-reviewer.md",
+    "./agents/php-tdd-guide.md",
+    "./agents/php-security-reviewer.md",
+    "./agents/php-build-resolver.md"
+  ]
+}

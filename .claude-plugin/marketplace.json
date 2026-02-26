@@ -1,0 +1,41 @@
+{
+  "name": "claude-code-php-toolkit",
+  "owner": {
+    "name": "claude-code-php-toolkit contributors"
+  },
+  "metadata": {
+    "description": "Production-ready Claude Code configurations for PHP development"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-php-toolkit",
+      "source": "./",
+      "description": "Agents, skills, commands, hooks, and rules for PHP — PSR standards, PHPUnit, Pest, PHPStan, Psalm, Composer, PHP-CS-Fixer",
+      "author": {
+        "name": "claude-code-php-toolkit contributors"
+      },
+      "homepage": "https://github.com/ekut/claude-code-php-toolkit",
+      "repository": "https://github.com/ekut/claude-code-php-toolkit",
+      "license": "MIT",
+      "keywords": [
+        "php",
+        "phpunit",
+        "pest",
+        "phpstan",
+        "composer",
+        "psr"
+      ],
+      "category": "workflow",
+      "tags": [
+        "agents",
+        "skills",
+        "hooks",
+        "commands",
+        "php",
+        "testing",
+        "static-analysis",
+        "code-review"
+      ]
+    }
+  ]
+}
