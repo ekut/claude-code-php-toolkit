@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 8 skills, 10 agents, 6 rules
+**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 9 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -46,7 +46,7 @@ TDD methodology, verification loops, and E2E patterns.
 | ECC Skill           | Purpose                                              | PHP Relevance                                                                                             | Status |
 |---------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------|
 | `tdd-workflow`      | TDD methodology, 80%+ coverage, Red-Green-Refactor   | Direct analog: `skills/php-testing/` + `agents/php-tdd-guide.md` cover PHPUnit/Pest TDD.                  | ✅      |
-| `verification-loop` | Static analysis + tests + quality checks pipeline    | PHP equivalent: PHPStan → PHP-CS-Fixer → PHPUnit pipeline. Worth a dedicated verification skill.          | 💡     |
+| `verification-loop` | Static analysis + tests + quality checks pipeline    | Direct analog: `skills/php-verification/` covers the full Composer → PHPStan → PHPUnit → audit pipeline.   | ✅      |
 | `e2e-testing`       | Playwright E2E testing, Page Object Model            | `agents/php-e2e-runner.md` covers Symfony/Laravel E2E. Playwright-specific is less relevant for PHP APIs. | ✅      |
 | `eval-harness`      | Formal evaluation framework for Claude Code sessions | Language-agnostic methodology. Could adapt for evaluating PHP agent quality.                              | 💡     |
 
@@ -69,7 +69,7 @@ Closest analog to the PHP/Symfony ecosystem — highest idea-transfer value.
 | `springboot-patterns`     | Spring Boot architecture: REST, services, caching, async | Partial analog: `skills/symfony-patterns/` covers Symfony equivalents. Laravel patterns skill would complete coverage. | ✅      |
 | `springboot-security`     | Spring Security: authn/authz, CSRF, rate limiting        | Ideas transfer well to Symfony Security / Laravel Sanctum+Gates. Could expand security skill.                          | 💡     |
 | `springboot-tdd`          | Spring Boot TDD: JUnit 5, Mockito, Testcontainers        | `skills/php-testing/` covers PHPUnit/Pest TDD. Testcontainers idea worth adopting for PHP.                             | ✅      |
-| `springboot-verification` | Build + analysis + tests + security scan pipeline        | Same concept as `verification-loop` — PHP pipeline (Composer → PHPStan → PHPUnit → `composer audit`).                  | 💡     |
+| `springboot-verification` | Build + analysis + tests + security scan pipeline        | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                           | ✅      |
 | `jpa-patterns`            | JPA/Hibernate: entities, relationships, queries, pooling | Directly maps to Doctrine ORM patterns. High-value skill for PHP projects using Doctrine.                              | 🔜     |
 
 ## 5. Python / Django
@@ -83,7 +83,7 @@ Second-closest analog — web framework patterns transferable to Laravel.
 | `django-patterns`     | Django architecture: DRF, ORM, caching, signals, middleware | Ideas transfer to Laravel: Eloquent, middleware, events, caching. A Laravel patterns skill would capture these. | 💡     |
 | `django-security`     | Django security: auth, CSRF, SQLi, XSS prevention           | Already covered by `agents/php-security-reviewer.md` + `rules/php/security.md`.                                 | ✅      |
 | `django-tdd`          | Django testing: pytest-django, factory_boy, DRF tests       | Concepts covered by `skills/php-testing/`. Factory pattern → use with `fakerphp/faker`.                         | ✅      |
-| `django-verification` | Django verification: migrations, linting, tests, security   | Same concept as verification-loop. PHP equivalent would be valuable.                                            | 💡     |
+| `django-verification` | Django verification: migrations, linting, tests, security   | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                   | ✅      |
 
 ## 6. Other Languages
 
@@ -135,26 +135,25 @@ Niche skills for specific use cases.
 | Category           | Total  | ✅      | 🔜    | 💡     | ➖      |
 |--------------------|--------|--------|-------|--------|--------|
 | Universal Patterns | 10     | 2      | 0     | 7      | 1      |
-| Testing & Quality  | 4      | 3      | 0     | 1      | 0      |
+| Testing & Quality  | 4      | 4      | 0     | 0      | 0      |
 | Security & DevOps  | 2      | 1      | 0     | 1      | 0      |
-| Java / Spring Boot | 6      | 3      | 1     | 2      | 0      |
-| Python / Django    | 6      | 4      | 0     | 2      | 0      |
+| Java / Spring Boot | 6      | 4      | 1     | 1      | 0      |
+| Python / Django    | 6      | 5      | 0     | 1      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
 | Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
 | Domain-Specific    | 5      | 0      | 1     | 1      | 3      |
-| **Total**          | **50** | **13** | **2** | **19** | **16** |
+| **Total**          | **50** | **16** | **2** | **16** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **PHP Verification Loop** — PHPStan + PHP-CS-Fixer + PHPUnit pipeline as a single skill (from `verification-loop`, `springboot-verification`, `django-verification`)
-2. **Doctrine ORM Patterns** — entity design, relationships, DQL, migrations (from `jpa-patterns`, `postgres-patterns`)
-3. **Doctrine ODM Patterns** — MongoDB document mapping, references, query builder, aggregation pipelines, lifecycle callbacks (complements ORM skill for document-database projects)
-4. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
-5. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
-6. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
-7. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
-8. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-9. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-10. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Doctrine ORM Patterns** — entity design, relationships, DQL, migrations (from `jpa-patterns`, `postgres-patterns`)
+2. **Doctrine ODM Patterns** — MongoDB document mapping, references, query builder, aggregation pipelines, lifecycle callbacks (complements ORM skill for document-database projects)
+3. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
+4. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
+5. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
+6. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
+7. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
+8. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+9. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
