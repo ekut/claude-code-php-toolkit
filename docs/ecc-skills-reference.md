@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 9 skills, 10 agents, 6 rules
+**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 10 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -70,7 +70,7 @@ Closest analog to the PHP/Symfony ecosystem — highest idea-transfer value.
 | `springboot-security`     | Spring Security: authn/authz, CSRF, rate limiting        | Ideas transfer well to Symfony Security / Laravel Sanctum+Gates. Could expand security skill.                          | 💡     |
 | `springboot-tdd`          | Spring Boot TDD: JUnit 5, Mockito, Testcontainers        | `skills/php-testing/` covers PHPUnit/Pest TDD. Testcontainers idea worth adopting for PHP.                             | ✅      |
 | `springboot-verification` | Build + analysis + tests + security scan pipeline        | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                           | ✅      |
-| `jpa-patterns`            | JPA/Hibernate: entities, relationships, queries, pooling | Directly maps to Doctrine ORM patterns. High-value skill for PHP projects using Doctrine.                              | 🔜     |
+| `jpa-patterns`            | JPA/Hibernate: entities, relationships, queries, pooling | Direct analog: `skills/doctrine-orm-patterns/` covers entities, relationships, DQL, migrations, performance.           | ✅      |
 
 ## 5. Python / Django
 
@@ -125,7 +125,7 @@ Niche skills for specific use cases.
 | `nutrient-document-processing` | Document processing, OCR, redaction via Nutrient API | Domain-specific SaaS integration. Not PHP-specific.                                                                        | ➖      |
 | `visa-doc-translate`           | Visa document translation to bilingual PDF           | Domain-specific workflow. Not PHP-specific.                                                                                | ➖      |
 | `clickhouse-io`                | ClickHouse analytics database patterns               | Niche but usable from PHP. Low priority — few PHP projects use ClickHouse directly.                                        | ➖      |
-| `postgres-patterns`            | PostgreSQL query optimization, schema, indexing      | Valuable for PHP. Partially covered by `agents/php-database-reviewer.md`. A Doctrine-focused patterns skill is on roadmap. | 🔜     |
+| `postgres-patterns`            | PostgreSQL query optimization, schema, indexing      | Partially covered by `skills/doctrine-orm-patterns/performance.md` + `agents/php-database-reviewer.md`.                    | ✅      |
 | `cost-aware-llm-pipeline`      | LLM API cost optimization: model routing, budgets    | Language-agnostic AI engineering. Low PHP-specific value but transferable concepts.                                        | 💡     |
 
 ---
@@ -137,23 +137,22 @@ Niche skills for specific use cases.
 | Universal Patterns | 10     | 2      | 0     | 7      | 1      |
 | Testing & Quality  | 4      | 4      | 0     | 0      | 0      |
 | Security & DevOps  | 2      | 1      | 0     | 1      | 0      |
-| Java / Spring Boot | 6      | 4      | 1     | 1      | 0      |
+| Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
 | Python / Django    | 6      | 5      | 0     | 1      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
 | Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
-| Domain-Specific    | 5      | 0      | 1     | 1      | 3      |
-| **Total**          | **50** | **16** | **2** | **16** | **16** |
+| Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
+| **Total**          | **50** | **18** | **0** | **16** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **Doctrine ORM Patterns** — entity design, relationships, DQL, migrations (from `jpa-patterns`, `postgres-patterns`)
-2. **Doctrine ODM Patterns** — MongoDB document mapping, references, query builder, aggregation pipelines, lifecycle callbacks (complements ORM skill for document-database projects)
-3. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
-4. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
-5. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
-6. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
-7. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-8. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-9. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Doctrine ODM Patterns** — MongoDB document mapping, references, query builder, aggregation pipelines, lifecycle callbacks (complements ORM skill for document-database projects)
+2. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
+3. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
+4. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
+5. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
+6. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
+7. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+8. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
