@@ -12,6 +12,7 @@ Production-ready agents, skills, commands, rules, and hooks for PHP development 
 - `commands/` — Slash commands as `.md` files (frontmatter: `description` only)
 - `rules/` — Coding rules (NOT part of plugin system, installed via `install.sh`)
 - `hooks/` — `hooks.json` auto-loaded by Claude Code v2.1+ (NOT declared in plugin.json)
+- `contexts/` — Session behavior presets injected via `--system-prompt` (NO frontmatter, NOT in plugin.json)
 - `examples/` — Template CLAUDE.md for PHP projects
 
 ## Conventions
@@ -43,3 +44,4 @@ Production-ready agents, skills, commands, rules, and hooks for PHP development 
 - Run `claude plugin validate .claude-plugin/plugin.json` before committing
 - When adding agents: add explicit file path to `plugin.json` agents array
 - When adding skills: put `SKILL.md` in a new `skills/{name}/` directory
+- When adding or removing agents, skills, commands, contexts, rules, or hooks: update README.md counts, tables, and architecture tree to match

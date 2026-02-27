@@ -73,6 +73,17 @@ composer check  # runs tests + phpstan + php-cs-fixer
 - Validate file uploads server-side
 - Run `composer audit` before releases
 
+## Contexts (Optional)
+
+Shell aliases for mode-switching:
+```bash
+alias claude-php='claude --system-prompt "$(cat contexts/php-dev.md)"'
+alias claude-php-review='claude --system-prompt "$(cat contexts/php-review.md)"'
+alias claude-php-refactor='claude --system-prompt "$(cat contexts/php-refactor.md)"'
+alias claude-php-debug='claude --system-prompt "$(cat contexts/php-debug.md)"'
+alias claude-php-legacy='claude --system-prompt "$(cat contexts/php-legacy.md)"'
+```
+
 ## Git Workflow
 
 - Conventional commits: `feat:`, `fix:`, `refactor:`, `test:`, `docs:`

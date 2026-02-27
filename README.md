@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (7)
+### Skills (8)
 
 | Skill | Description |
 |-------|-------------|
@@ -103,6 +103,7 @@ Customize it for your project's specific needs.
 | [php-architecture-ddd](skills/php-architecture-ddd/SKILL.md) | DDD — Rich Domain, Hexagonal, CQRS, Bounded Contexts |
 | [php-architecture-service-layer](skills/php-architecture-service-layer/SKILL.md) | Service-Oriented — Service Layer, Transaction Scripts, DTOs |
 | [php-architecture-action-based](skills/php-architecture-action-based/SKILL.md) | Action-Based — Single-action controllers, ADR, Command/Query |
+| [symfony-patterns](skills/symfony-patterns/SKILL.md) | Symfony 6+/7+ architecture — service container, autowiring, controllers, events, Messenger |
 
 ### Commands (3)
 
@@ -131,6 +132,33 @@ Customize it for your project's specific needs.
 | PHPStan on edit | Type-checks PHP files after Edit/Write |
 
 Hooks are auto-loaded from `hooks/hooks.json` by Claude Code (v2.1+). They are **not** declared in `plugin.json` to avoid the duplicate hooks error.
+
+### Contexts (5)
+
+Session behavior presets — injected via `--system-prompt` to switch Claude's working mode for the entire session.
+
+| Context | Mode |
+|---------|------|
+| [php-dev](contexts/php-dev.md) | Active development — type-safe, test-first, Composer workflow |
+| [php-review](contexts/php-review.md) | Code review — security, types, PSR compliance, severity-grouped output |
+| [php-refactor](contexts/php-refactor.md) | Refactoring — structural changes with test-guarded discipline |
+| [php-debug](contexts/php-debug.md) | Debugging — reproduce, diagnose, fix cycle |
+| [php-legacy](contexts/php-legacy.md) | Legacy modernization — incremental migration to PHP 8.1+ |
+
+**Usage:**
+
+```bash
+claude --system-prompt "$(cat contexts/php-dev.md)"
+```
+
+Or create shell aliases:
+
+```bash
+alias claude-php='claude --system-prompt "$(cat contexts/php-dev.md)"'
+alias claude-review='claude --system-prompt "$(cat contexts/php-review.md)"'
+```
+
+Contexts are NOT part of the plugin system — they are standalone markdown files used via CLI flag.
 
 ## Requirements
 
@@ -167,8 +195,15 @@ skills/
 ├── php-architecture-ddd/          # DDD, Hexagonal, CQRS
 ├── php-architecture-service-layer/ # Service Layer, Transaction Scripts
 ├── php-architecture-action-based/ # Action-Based, ADR
-├── symfony-services/              # Symfony (future)
+├── symfony-patterns/              # Symfony 6+/7+ patterns
 └── laravel-eloquent/              # Laravel (future)
+
+contexts/
+├── php-dev.md             # Development mode
+├── php-review.md          # Code review mode
+├── php-refactor.md        # Refactoring mode
+├── php-debug.md           # Debugging mode
+└── php-legacy.md          # Legacy modernization mode
 ```
 
 ## Roadmap
