@@ -29,6 +29,12 @@ Production-ready agents, skills, commands, rules, and hooks for PHP development 
 - Never add `hooks` to plugin.json — auto-loaded by convention, causes duplicate error
 - See `.claude-plugin/PLUGIN_SCHEMA_NOTES.md` for full validator constraints
 
+## MCP Tools & References
+
+- **Context7** — Always use `mcp context7` (resolve-library-id → query-docs) when researching capabilities, APIs, or usage patterns of any library, framework, or package. Do not rely solely on training data — fetch up-to-date documentation first.
+- **Sequential Thinking** — Always use `mcp sequential-thinking` when planning any task and when solving complex or multi-step problems. Structure your reasoning into numbered thought steps before acting.
+- **everything-claude-code** — When planning solutions, consult the sibling `../everything-claude-code` repository for proven patterns, hints, examples, and best practices. Use it as a reference for high-quality implementations.
+
 ## Contributing
 
 - Follow conventional commits

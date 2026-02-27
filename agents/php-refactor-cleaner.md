@@ -101,16 +101,16 @@ vendor/bin/psalm
 
 These patterns cause tools to report code as unused when it is actually used:
 
-| Pattern | Why it looks unused | How to verify |
-|---------|-------------------|---------------|
-| Event listeners | Registered in config, no direct import | Check `services.yaml`, `EventServiceProvider` |
-| Service providers | Auto-discovered or listed in config | Check `config/app.php`, bundle config |
-| Middleware | Declared in routing config | Check route definitions, kernel |
-| Doctrine entities | Referenced in DQL, not imported | Search DQL strings and mapping files |
-| Data providers | Referenced by attribute/annotation | Search `DataProvider('methodName')` |
-| Console commands | Auto-tagged by framework | Check service tags, command config |
-| Twig extensions | Registered as service | Check service definitions |
-| Serializer normalizers | Auto-configured | Check serializer config |
+| Pattern                | Why it looks unused                    | How to verify                                 |
+|------------------------|----------------------------------------|-----------------------------------------------|
+| Event listeners        | Registered in config, no direct import | Check `services.yaml`, `EventServiceProvider` |
+| Service providers      | Auto-discovered or listed in config    | Check `config/app.php`, bundle config         |
+| Middleware             | Declared in routing config             | Check route definitions, kernel               |
+| Doctrine entities      | Referenced in DQL, not imported        | Search DQL strings and mapping files          |
+| Data providers         | Referenced by attribute/annotation     | Search `DataProvider('methodName')`           |
+| Console commands       | Auto-tagged by framework               | Check service tags, command config            |
+| Twig extensions        | Registered as service                  | Check service definitions                     |
+| Serializer normalizers | Auto-configured                        | Check serializer config                       |
 
 ### 6. Apply Refactoring Patterns
 
