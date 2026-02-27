@@ -85,14 +85,14 @@ Customize it for your project's specific needs.
 | [php-tdd-guide](agents/php-tdd-guide.md) | TDD specialist — Red-Green-Refactor with PHPUnit and Pest |
 | [php-security-reviewer](agents/php-security-reviewer.md) | Security audit — OWASP Top 10, SQL injection, XSS, CSRF |
 | [php-build-resolver](agents/php-build-resolver.md) | Composer & PHP build error resolution |
-| [php-architect](agents/php-architect.md) | System architecture — DDD, hexagonal, CQRS, scalability |
+| [php-architect](agents/php-architect.md) | System architecture — neutral assessment, 3 architectural schools, two-phase recommendation |
 | [php-planner](agents/php-planner.md) | Feature planning — phased implementation, risks, deployment |
 | [php-database-reviewer](agents/php-database-reviewer.md) | Database review — schemas, migrations, queries, ORM (MySQL & PostgreSQL) |
 | [php-doc-updater](agents/php-doc-updater.md) | Documentation — PHPDoc, codemaps, API stubs |
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (4)
+### Skills (7)
 
 | Skill | Description |
 |-------|-------------|
@@ -100,6 +100,9 @@ Customize it for your project's specific needs.
 | [php-coding-standards](skills/php-coding-standards/SKILL.md) | PSR-1, PSR-4, PSR-12, PER-CS 2.0, PHP-CS-Fixer, Pint |
 | [php-testing](skills/php-testing/SKILL.md) | PHPUnit 10+, Pest 2+, mocking, coverage, data providers |
 | [php-static-analysis](skills/php-static-analysis/SKILL.md) | PHPStan, Psalm, PHP-CS-Fixer, Rector |
+| [php-architecture-ddd](skills/php-architecture-ddd/SKILL.md) | DDD — Rich Domain, Hexagonal, CQRS, Bounded Contexts |
+| [php-architecture-service-layer](skills/php-architecture-service-layer/SKILL.md) | Service-Oriented — Service Layer, Transaction Scripts, DTOs |
+| [php-architecture-action-based](skills/php-architecture-action-based/SKILL.md) | Action-Based — Single-action controllers, ADR, Command/Query |
 
 ### Commands (3)
 
@@ -157,10 +160,15 @@ rules/
 └── laravel/         # Laravel rules (future)
 
 skills/
-├── php-patterns/            # Core PHP (current)
-├── php-coding-standards/    # Core PHP (current)
-├── symfony-services/        # Symfony (future)
-└── laravel-eloquent/        # Laravel (future)
+├── php-patterns/                  # Core PHP idioms
+├── php-coding-standards/          # PSR, PER-CS, formatting
+├── php-testing/                   # PHPUnit, Pest
+├── php-static-analysis/           # PHPStan, Psalm, Rector
+├── php-architecture-ddd/          # DDD, Hexagonal, CQRS
+├── php-architecture-service-layer/ # Service Layer, Transaction Scripts
+├── php-architecture-action-based/ # Action-Based, ADR
+├── symfony-services/              # Symfony (future)
+└── laravel-eloquent/              # Laravel (future)
 ```
 
 ## Roadmap
