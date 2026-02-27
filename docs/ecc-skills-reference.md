@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 10 skills, 10 agents, 6 rules
+**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 11 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -32,7 +32,7 @@ Language-agnostic ideas directly applicable to PHP.
 | `backend-patterns`             | Backend architecture for Node.js/Express/Next.js                 | Core ideas (layered services, caching, error handling) transfer well. Partially covered by `skills/php-patterns/` and architecture skills. | 💡     |
 | `coding-standards`             | Universal coding standards for TS/JS/React                       | Direct analog: `skills/php-coding-standards/` covers PSR-1/4/12, PER 2.0, PHP-CS-Fixer.                                                    | ✅      |
 | `frontend-patterns`            | React/Next.js frontend patterns                                  | PHP is backend-focused. Not applicable unless building Livewire/Inertia guides.                                                            | ➖      |
-| `database-migrations`          | Migration best practices, rollbacks, zero-downtime               | Directly applicable: Doctrine Migrations, Laravel Migrations, Phinx. Worth a dedicated skill.                                              | 💡     |
+| `database-migrations`          | Migration best practices, rollbacks, zero-downtime               | Covered by `skills/doctrine-orm-patterns/migrations.md` (zero-downtime strategies, rollbacks).                                              | ✅      |
 | `content-hash-cache-pattern`   | SHA-256 content-hash caching for file processing                 | Pattern transfers to PHP caching (OPcache, APCu, Redis, Symfony Cache). Could be a focused recipe.                                         | 💡     |
 | `deployment-patterns`          | CI/CD pipelines, Docker, health checks, rollbacks                | Directly applicable: php-fpm, Swoole/FrankenPHP, Deployer, Envoyer. Worth a dedicated skill.                                               | 💡     |
 | `docker-patterns`              | Docker Compose, container security, multi-service                | PHP-specific Dockerfiles (multi-stage, extension installation, OPcache tuning) are high-value.                                             | 💡     |
@@ -134,7 +134,7 @@ Niche skills for specific use cases.
 
 | Category           | Total  | ✅      | 🔜    | 💡     | ➖      |
 |--------------------|--------|--------|-------|--------|--------|
-| Universal Patterns | 10     | 2      | 0     | 7      | 1      |
+| Universal Patterns | 10     | 3      | 0     | 6      | 1      |
 | Testing & Quality  | 4      | 4      | 0     | 0      | 0      |
 | Security & DevOps  | 2      | 1      | 0     | 1      | 0      |
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
@@ -142,17 +142,16 @@ Niche skills for specific use cases.
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
 | Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **18** | **0** | **16** | **16** |
+| **Total**          | **50** | **19** | **0** | **15** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **Doctrine ODM Patterns** — MongoDB document mapping, references, query builder, aggregation pipelines, lifecycle callbacks (complements ORM skill for document-database projects)
-2. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
-3. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
-4. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
-5. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
-6. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-7. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-8. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **PHP Deployment Patterns** — php-fpm, Swoole, FrankenPHP, Docker, Deployer (from `deployment-patterns`, `docker-patterns`)
+2. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
+3. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
+4. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
+5. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
+6. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+7. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
