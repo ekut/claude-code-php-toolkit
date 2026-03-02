@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (13)
+### Skills (14)
 
 | Skill | Description |
 |-------|-------------|
@@ -109,6 +109,7 @@ Customize it for your project's specific needs.
 | [php-deployment](skills/php-deployment/SKILL.md) | Docker, php-fpm, Swoole, FrankenPHP, Deployer, CI/CD, zero-downtime |
 | [symfony-patterns](skills/symfony-patterns/SKILL.md) | Symfony 6+/7+ architecture — service container, autowiring, controllers, events, Messenger |
 | [laravel-patterns](skills/laravel-patterns/SKILL.md) | Laravel 10+/11+ architecture — routing, Eloquent, middleware, events, queues, validation |
+| [php-api-design](skills/php-api-design/SKILL.md) | REST API design — resource naming, status codes, pagination, versioning, rate limiting |
 
 ### Commands (3)
 
@@ -205,7 +206,9 @@ skills/
 ├── doctrine-odm-patterns/        # Doctrine MongoDB ODM documents, queries
 ├── php-deployment/                # Docker, runtimes, CI/CD, Deployer
 ├── symfony-patterns/              # Symfony 6+/7+ patterns
-└── laravel-patterns/             # Laravel 10+/11+ patterns
+├── laravel-patterns/             # Laravel 10+/11+ patterns
+├── php-api-design/               # REST API design patterns
+
 
 contexts/
 ├── php-dev.md             # Development mode
