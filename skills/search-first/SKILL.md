@@ -113,7 +113,7 @@ Check these high-quality sources before general search:
 | Collection utilities | Laravel | `illuminate/collections` (standalone) |
 | Logging | PSR-3 | `monolog/monolog` |
 | Caching | PSR-6/16 | `symfony/cache`, `phpfastcache/phpfastcache` |
-| Queue/messaging | Symfony | `symfony/messenger`, `php-enqueue/enqueue` |
+| Queue/messaging | Symfony | `symfony/messenger`, `enqueue/enqueue` |
 | Permission management | Spatie | `spatie/laravel-permission` |
 | Settings / config | Spatie | `spatie/laravel-settings` |
 | Media / file uploads | Spatie | `spatie/laravel-medialibrary` |

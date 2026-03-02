@@ -115,20 +115,22 @@ Customize it for your project's specific needs.
 | [continuous-learning](skills/continuous-learning/SKILL.md) | Auto-extract PHP patterns from sessions — instinct model, confidence scoring, hooks |
 | [skill-stocktake](skills/skill-stocktake/SKILL.md) | Skill quality audit — Quick Scan and Full Stocktake modes, verdicts, consolidation |
 
-### Commands (3)
+### Commands (4)
 
 | Command | Description |
 |---------|-------------|
 | `/php-review` | Comprehensive PHP code review |
 | `/php-tdd` | TDD workflow with PHPUnit or Pest |
 | `/php-analyze` | Run PHPStan + PHP-CS-Fixer + Psalm |
+| `/audit-packages` | Audit package references against verified-packages.json allowlist |
 
-### Rules (6)
+### Rules (7)
 
 | Rule | Scope |
 |------|-------|
 | [git-workflow](rules/common/git-workflow.md) | Conventional commits, branching, PR workflow |
 | [development-workflow](rules/common/development-workflow.md) | Plan > TDD > Review > Commit |
+| [supply-chain-safety](rules/common/supply-chain-safety.md) | Package verification, hallucination prevention, allowlist |
 | [coding-style](rules/php/coding-style.md) | PSR-12/PER-CS, strict types, final by default |
 | [testing](rules/php/testing.md) | PHPUnit/Pest requirements, 80% coverage |
 | [security](rules/php/security.md) | PDO, htmlspecialchars, password_hash, CSRF |

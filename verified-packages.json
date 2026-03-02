@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "last_full_audit": "2026-03-02",
+  "description": "Allowlist of verified Composer packages referenced in skills, commands, and rules. Used by supply-chain-safety rule and /audit-packages command to prevent hallucinated package installation.",
+  "packages": [
+    {
+      "name": "phpstan/phpstan",
+      "packagist": "https://packagist.org/packages/phpstan/phpstan",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis", "skills/php-security-scanning", "skills/php-verification", "skills/php-deployment", "commands/php-analyze.md"]
+    },
+    {
+      "name": "phpstan/phpstan-symfony",
+      "packagist": "https://packagist.org/packages/phpstan/phpstan-symfony",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis"]
+    },
+    {
+      "name": "phpstan/phpstan-doctrine",
+      "packagist": "https://packagist.org/packages/phpstan/phpstan-doctrine",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis", "skills/doctrine-orm-patterns"]
+    },
+    {
+      "name": "phpstan/phpstan-strict-rules",
+      "packagist": "https://packagist.org/packages/phpstan/phpstan-strict-rules",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis", "skills/php-security-scanning"]
+    },
+    {
+      "name": "phpstan/phpstan-deprecation-rules",
+      "packagist": "https://packagist.org/packages/phpstan/phpstan-deprecation-rules",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis"]
+    },
+    {
+      "name": "larastan/larastan",
+      "packagist": "https://packagist.org/packages/larastan/larastan",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis"]
+    },
+    {
+      "name": "vimeo/psalm",
+      "packagist": "https://packagist.org/packages/vimeo/psalm",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis", "skills/php-security-scanning", "skills/php-verification"]
+    },
+    {
+      "name": "rector/rector",
+      "packagist": "https://packagist.org/packages/rector/rector",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-static-analysis", "skills/php-verification"]
+    },
+    {
+      "name": "roave/security-advisories",
+      "packagist": "https://packagist.org/packages/roave/security-advisories",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-security-scanning"]
+    },
+    {
+      "name": "ekino/phpstan-banned-code",
+      "packagist": "https://packagist.org/packages/ekino/phpstan-banned-code",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-security-scanning"]
+    },
+    {
+      "name": "doctrine/doctrine-migrations-bundle",
+      "packagist": "https://packagist.org/packages/doctrine/doctrine-migrations-bundle",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/doctrine-orm-patterns"]
+    },
+    {
+      "name": "deployer/deployer",
+      "packagist": "https://packagist.org/packages/deployer/deployer",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-deployment"]
+    },
+    {
+      "name": "runtime/swoole",
+      "packagist": "https://packagist.org/packages/runtime/swoole",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-deployment"]
+    },
+    {
+      "name": "phpunit/phpunit",
+      "packagist": "https://packagist.org/packages/phpunit/phpunit",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-testing", "skills/php-verification", "skills/php-deployment"]
+    },
+    {
+      "name": "friendsofphp/php-cs-fixer",
+      "packagist": "https://packagist.org/packages/friendsofphp/php-cs-fixer",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-coding-standards", "skills/php-static-analysis", "skills/php-verification"]
+    },
+    {
+      "name": "laravel/pint",
+      "packagist": "https://packagist.org/packages/laravel/pint",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-coding-standards", "skills/php-verification"]
+    },
+    {
+      "name": "pestphp/pest",
+      "packagist": "https://packagist.org/packages/pestphp/pest",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/php-verification"]
+    },
+    {
+      "name": "dompdf/dompdf",
+      "packagist": "https://packagist.org/packages/dompdf/dompdf",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "tecnickcom/tcpdf",
+      "packagist": "https://packagist.org/packages/tecnickcom/tcpdf",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "mpdf/mpdf",
+      "packagist": "https://packagist.org/packages/mpdf/mpdf",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "barryvdh/laravel-dompdf",
+      "packagist": "https://packagist.org/packages/barryvdh/laravel-dompdf",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "intervention/image",
+      "packagist": "https://packagist.org/packages/intervention/image",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "maatwebsite/excel",
+      "packagist": "https://packagist.org/packages/maatwebsite/excel",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "openspout/openspout",
+      "packagist": "https://packagist.org/packages/openspout/openspout",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "league/csv",
+      "packagist": "https://packagist.org/packages/league/csv",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "symfony/http-client",
+      "packagist": "https://packagist.org/packages/symfony/http-client",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "guzzlehttp/guzzle",
+      "packagist": "https://packagist.org/packages/guzzlehttp/guzzle",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "respect/validation",
+      "packagist": "https://packagist.org/packages/respect/validation",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "symfony/validator",
+      "packagist": "https://packagist.org/packages/symfony/validator",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "symfony/uid",
+      "packagist": "https://packagist.org/packages/symfony/uid",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "ramsey/uuid",
+      "packagist": "https://packagist.org/packages/ramsey/uuid",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "nesbot/carbon",
+      "packagist": "https://packagist.org/packages/nesbot/carbon",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "brick/date-time",
+      "packagist": "https://packagist.org/packages/brick/date-time",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "league/commonmark",
+      "packagist": "https://packagist.org/packages/league/commonmark",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "league/flysystem",
+      "packagist": "https://packagist.org/packages/league/flysystem",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "illuminate/collections",
+      "packagist": "https://packagist.org/packages/illuminate/collections",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "monolog/monolog",
+      "packagist": "https://packagist.org/packages/monolog/monolog",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "symfony/cache",
+      "packagist": "https://packagist.org/packages/symfony/cache",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "phpfastcache/phpfastcache",
+      "packagist": "https://packagist.org/packages/phpfastcache/phpfastcache",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "symfony/messenger",
+      "packagist": "https://packagist.org/packages/symfony/messenger",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "enqueue/enqueue",
+      "packagist": "https://packagist.org/packages/enqueue/enqueue",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"],
+      "note": "Skill file references php-enqueue/enqueue but correct Packagist name is enqueue/enqueue"
+    },
+    {
+      "name": "spatie/laravel-permission",
+      "packagist": "https://packagist.org/packages/spatie/laravel-permission",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-settings",
+      "packagist": "https://packagist.org/packages/spatie/laravel-settings",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-medialibrary",
+      "packagist": "https://packagist.org/packages/spatie/laravel-medialibrary",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-data",
+      "packagist": "https://packagist.org/packages/spatie/laravel-data",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-activitylog",
+      "packagist": "https://packagist.org/packages/spatie/laravel-activitylog",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-query-builder",
+      "packagist": "https://packagist.org/packages/spatie/laravel-query-builder",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    },
+    {
+      "name": "spatie/laravel-sluggable",
+      "packagist": "https://packagist.org/packages/spatie/laravel-sluggable",
+      "verified_at": "2026-03-02",
+      "referenced_in": ["skills/search-first"]
+    }
+  ],
+  "vendor_bin": [
+    { "binary": "phpstan", "package": "phpstan/phpstan" },
+    { "binary": "psalm", "package": "vimeo/psalm" },
+    { "binary": "php-cs-fixer", "package": "friendsofphp/php-cs-fixer" },
+    { "binary": "pint", "package": "laravel/pint" },
+    { "binary": "rector", "package": "rector/rector" },
+    { "binary": "phpunit", "package": "phpunit/phpunit" },
+    { "binary": "pest", "package": "pestphp/pest" },
+    { "binary": "doctrine-migrations", "package": "doctrine/doctrine-migrations-bundle" },
+    { "binary": "doctrine-mongodb", "package": "doctrine/mongodb-odm" },
+    { "binary": "doctrine", "package": "doctrine/orm" },
+    { "binary": "dep", "package": "deployer/deployer" }
+  ]
+}

@@ -36,6 +36,13 @@ Production-ready agents, skills, commands, rules, and hooks for PHP development 
 - **Sequential Thinking** — Always use `mcp sequential-thinking` when planning any task and when solving complex or multi-step problems. Structure your reasoning into numbered thought steps before acting.
 - **everything-claude-code** — When planning solutions, consult the sibling `../everything-claude-code` repository for proven patterns, hints, examples, and best practices. Use it as a reference for high-quality implementations.
 
+## Supply Chain Safety
+
+- Verify every package name on Packagist before writing `composer require` to skill files
+- Add verified packages to `verified-packages.json`
+- Run `/audit-packages` before committing changes to skills
+- See `rules/common/supply-chain-safety.md` for the full protocol
+
 ## Contributing
 
 - Follow conventional commits

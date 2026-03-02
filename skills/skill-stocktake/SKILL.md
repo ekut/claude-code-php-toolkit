@@ -183,6 +183,7 @@ In addition to the general checklist, PHP skills should pass these checks:
 | Framework versions | Laravel 10+/11+, Symfony 6.4+/7.x references |
 | PSR compliance | References current PSR standards (PSR-12, PER-CS 2.0) |
 | Tool versions | PHPStan, Psalm, PHP-CS-Fixer CLI flags are current |
+| Package references | All `composer require` packages verified in `verified-packages.json` |
 
 ## Results File Schema
 
