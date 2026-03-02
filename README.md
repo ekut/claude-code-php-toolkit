@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (18)
+### Skills (24)
 
 | Skill | Description |
 |-------|-------------|
@@ -111,6 +111,12 @@ Customize it for your project's specific needs.
 | [laravel-patterns](skills/laravel-patterns/SKILL.md) | Laravel 10+/11+ architecture — routing, Eloquent, middleware, events, queues, validation |
 | [php-api-design](skills/php-api-design/SKILL.md) | REST API design — resource naming, status codes, pagination, versioning, rate limiting |
 | [php-security-scanning](skills/php-security-scanning/SKILL.md) | Security scanning pipeline — Composer audit, Psalm taint, PHPStan security, secrets, debug detection |
+| [php-security-patterns](skills/php-security-patterns/SKILL.md) | Security implementation — authentication, authorization, CORS, security headers, PII protection |
+| [php-error-handling](skills/php-error-handling/SKILL.md) | Error handling — exception hierarchies, RFC 9457 Problem Details, structured logging, retry patterns |
+| [content-hash-cache](skills/content-hash-cache/SKILL.md) | SHA-256 content-hash caching — deterministic cache keys, file-based storage, PSR-16 integration |
+| [eval-harness](skills/eval-harness/SKILL.md) | Evaluation framework — PHP graders, metrics (pass@k), 4-phase EDD workflow |
+| [strategic-compact](skills/strategic-compact/SKILL.md) | Strategic /compact — phase transitions, survival map, context preservation |
+| [iterative-retrieval](skills/iterative-retrieval/SKILL.md) | Progressive context retrieval — 4-phase DISPATCH-EVALUATE-REFINE-LOOP, PHP search patterns |
 | [search-first](skills/search-first/SKILL.md) | Research-before-coding workflow — search Packagist, Spatie, League before writing custom code |
 | [continuous-learning](skills/continuous-learning/SKILL.md) | Auto-extract PHP patterns from sessions — instinct model, confidence scoring, hooks |
 | [skill-stocktake](skills/skill-stocktake/SKILL.md) | Skill quality audit — Quick Scan and Full Stocktake modes, verdicts, consolidation |
@@ -194,7 +200,7 @@ The toolkit is **framework-agnostic** at its core. The directory structure suppo
 
 ```
 rules/
-├── common/          # Generic rules (git, workflow)
+├── common/          # Generic rules (git, workflow, supply-chain safety)
 ├── php/             # Core PHP rules (current)
 ├── symfony/         # Symfony rules (future)
 └── laravel/         # Laravel rules (future)
@@ -215,6 +221,12 @@ skills/
 ├── laravel-patterns/             # Laravel 10+/11+ patterns
 ├── php-api-design/               # REST API design patterns
 ├── php-security-scanning/        # Security scanning pipeline
+├── php-security-patterns/        # Security implementation patterns
+├── php-error-handling/           # Error handling & structured logging
+├── content-hash-cache/           # Content-hash caching pattern
+├── eval-harness/                 # Evaluation framework for AI sessions
+├── strategic-compact/            # Strategic /compact guide
+├── iterative-retrieval/          # Progressive context retrieval
 ├── search-first/                 # Research-before-coding workflow
 ├── continuous-learning/          # Auto-extract patterns from sessions
 └── skill-stocktake/             # Skill quality audit framework
@@ -229,10 +241,10 @@ contexts/
 
 ## Roadmap
 
-- [ ] Symfony support (routing, services, Doctrine, Twig)
-- [ ] Laravel support (Eloquent, Blade, Artisan, queues)
+- [x] Symfony support (routing, services, Doctrine, Twig)
+- [x] Laravel support (Eloquent, Blade, Artisan, queues)
+- [x] Doctrine ORM patterns
 - [ ] API Platform support
-- [ ] Doctrine ORM patterns
 - [ ] PHP package development skill (library authors)
 - [ ] Docker/Compose integration hooks
 - [ ] CI/CD pipeline templates (GitHub Actions, GitLab CI)
