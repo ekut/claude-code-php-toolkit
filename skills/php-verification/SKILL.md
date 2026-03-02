@@ -100,24 +100,15 @@ Coverage:  XX.X% lines (target: 80%+)
 
 ## Phase 5: Security Scan
 
-Check for known vulnerabilities, leaked secrets, and debug leftovers.
+> See `php-security-scanning` skill for a comprehensive 5-phase security pipeline (dependency audit, taint analysis, secrets check, debug detection, OWASP pattern scan).
+
+Quick check for the verification loop:
 
 ```bash
-# Known vulnerability audit (Composer 2.4+)
-composer audit
-
-# Debug statement scan
-grep -rn "var_dump\|print_r\|dd(\|dump(\|error_log\|ray(" src/ --include="*.php"
-
-# Secrets scan (API keys, passwords, tokens)
-grep -rn "password\s*=\s*['\"]" src/ config/ --include="*.php" --include="*.yaml" --include="*.yml"
-grep -rn "sk-\|api_key\|secret_key\|PRIVATE.KEY" src/ config/ --include="*.php" --include="*.yaml"
-
-# Psalm taint analysis (if configured)
-vendor/bin/psalm --taint-analysis
+composer audit && grep -rn "var_dump\|print_r\|dd(\|dump(" src/ --include="*.php"
 ```
 
-**Pass criteria:** No known CVEs, no debug statements in `src/`, no hardcoded secrets.
+**Pass criteria:** No known CVEs, no debug statements in `src/`.
 
 ## Phase 6: Diff Review
 

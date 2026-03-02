@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "observation": {
+    "enabled": true,
+    "store_path": "~/.claude/learning/observations.jsonl",
+    "max_file_size_mb": 10
+  },
+  "evaluate": {
+    "enabled": true,
+    "min_session_length": 10,
+    "learned_skills_path": "~/.claude/learning/skills/learned/"
+  },
+  "patterns_to_detect": [
+    "error_resolution",
+    "user_corrections",
+    "composer_resolution",
+    "phpstan_fixes",
+    "framework_quirks",
+    "testing_patterns"
+  ]
+}

@@ -136,36 +136,85 @@ Lightweight — runs once when a session ends, reviews the full transcript.
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "php ~/.claude/skills/continuous-learning/evaluate-session.php"
+        "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/evaluate-session.php\""
       }]
     }]
   }
 }
 ```
 
-### v2: Real-Time Observation (PreToolUse/PostToolUse Hooks)
+### v2: Real-Time Observation (PostToolUse/PostToolUseFailure Hooks)
 
-Comprehensive — captures every tool call for pattern detection.
+Comprehensive — captures every tool call for pattern detection. PostToolUse receives both `tool_input` and `tool_output` (full context). PostToolUseFailure captures failed tool calls with the error.
 
 ```json
 {
   "hooks": {
-    "PreToolUse": [{
-      "matcher": "*",
-      "hooks": [{
-        "type": "command",
-        "command": "php ~/.claude/skills/continuous-learning/observe.php pre"
-      }]
-    }],
     "PostToolUse": [{
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "php ~/.claude/skills/continuous-learning/observe.php post"
+        "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/observe.php\" post"
+      }]
+    }],
+    "PostToolUseFailure": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/observe.php\" failure"
       }]
     }]
   }
 }
+```
+
+For manual install (copied to `~/.claude/skills/`), replace `${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/` with `~/.claude/skills/continuous-learning/`.
+
+### Combined (Recommended)
+
+Use both v1 and v2 together for full coverage:
+
+```json
+{
+  "hooks": {
+    "Stop": [{
+      "matcher": "*",
+      "hooks": [{ "type": "command", "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/evaluate-session.php\"" }]
+    }],
+    "PostToolUse": [{
+      "matcher": "*",
+      "hooks": [{ "type": "command", "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/observe.php\" post" }]
+    }],
+    "PostToolUseFailure": [{
+      "matcher": "*",
+      "hooks": [{ "type": "command", "command": "php \"${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning/observe.php\" failure" }]
+    }]
+  }
+}
+```
+
+### Quick Verification
+
+```bash
+# Test observe.php — PostToolUse
+echo '{"session_id":"test","tool_name":"Edit","tool_input":{"file_path":"test.php"},"tool_output":{"output":"ok"}}' | \
+  php skills/continuous-learning/observe.php post
+cat ~/.claude/learning/observations.jsonl
+
+# Test observe.php — PostToolUseFailure
+echo '{"session_id":"test","tool_name":"Bash","tool_input":{"command":"npm test"},"tool_output":{"error":"exit code 1"}}' | \
+  php skills/continuous-learning/observe.php failure
+
+# Test evaluate-session.php — outputs to stderr
+echo '{}' | php skills/continuous-learning/evaluate-session.php
+
+# Test disabled flag
+touch ~/.claude/learning/disabled
+echo '{"session_id":"test","tool_name":"Bash"}' | php skills/continuous-learning/observe.php post
+rm ~/.claude/learning/disabled
+
+# Cleanup test data
+rm -rf ~/.claude/learning/
 ```
 
 ### Why Hooks?

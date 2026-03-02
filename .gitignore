@@ -34,3 +34,6 @@ psalm-baseline.xml
 
 # Build artifacts
 *.cache
+
+# Claude Code local settings (personal permissions and MCP config)
+.claude/settings.local.json

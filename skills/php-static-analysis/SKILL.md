@@ -173,27 +173,12 @@ vendor/bin/psalm --update-baseline  # Remove fixed issues
 
 ## PHP-CS-Fixer
 
-### Dry Run & Fix
+> See `php-coding-standards` skill for PHP-CS-Fixer and Pint configuration, rule sets, and PSR/PER standards.
 
 ```bash
-# Check without fixing
-vendor/bin/php-cs-fixer fix --dry-run --diff
-
-# Fix all files
-vendor/bin/php-cs-fixer fix
-
-# Fix specific file
-vendor/bin/php-cs-fixer fix src/Domain/User.php
+vendor/bin/php-cs-fixer fix --dry-run --diff  # Check
+vendor/bin/php-cs-fixer fix                   # Fix
 ```
-
-### Common Rule Sets
-
-| Rule Set | Description |
-|----------|-------------|
-| `@PER-CS2.0` | PER Coding Style 2.0 |
-| `@PSR12` | PSR-12 |
-| `@Symfony` | Symfony coding standards |
-| `@PhpCsFixer` | PHP-CS-Fixer recommended rules |
 
 ## Rector
 
@@ -236,33 +221,13 @@ vendor/bin/rector process            # Apply changes
 
 ## CI Integration
 
-### GitHub Actions Example
+> See `php-deployment` skill for full GitHub Actions and GitLab CI pipeline examples, and `php-verification` skill for the 6-phase verification workflow.
 
-```yaml
-name: Static Analysis
-
-on: [push, pull_request]
-
-jobs:
-  phpstan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-      - run: composer install --no-progress
-      - run: vendor/bin/phpstan analyse
-
-  php-cs-fixer:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-      - run: composer install --no-progress
-      - run: vendor/bin/php-cs-fixer fix --dry-run --diff
+```bash
+# Minimal CI commands for static analysis
+vendor/bin/phpstan analyse
+vendor/bin/psalm --no-cache
+vendor/bin/php-cs-fixer fix --dry-run --diff
 ```
 
 ## Checklist
