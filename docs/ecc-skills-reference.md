@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 14 skills, 10 agents, 6 rules
+**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 15 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -57,7 +57,7 @@ Security review, scanning, and infrastructure patterns.
 | ECC Skill         | Purpose                                          | PHP Relevance                                                                           | Status |
 |-------------------|--------------------------------------------------|-----------------------------------------------------------------------------------------|--------|
 | `security-review` | OWASP Top 10 checklist: SQLi, XSS, CSRF, secrets | Direct analog: `agents/php-security-reviewer.md` + `rules/php/security.md`.             | ✅      |
-| `security-scan`   | Audit Claude Code config for vulnerabilities     | Could adapt for PHP: `composer audit`, Psalm taint analysis, Roave Security Advisories. | 💡     |
+| `security-scan`   | Audit Claude Code config for vulnerabilities     | Adapted for PHP: `skills/php-security-scanning/` covers Composer audit, Psalm taint, PHPStan security, secrets, debug detection. | ✅      |
 
 ## 4. Java / Spring Boot
 
@@ -136,19 +136,18 @@ Niche skills for specific use cases.
 |--------------------|--------|--------|-------|--------|--------|
 | Universal Patterns | 10     | 6      | 0     | 3      | 1      |
 | Testing & Quality  | 4      | 4      | 0     | 0      | 0      |
-| Security & DevOps  | 2      | 1      | 0     | 1      | 0      |
+| Security & DevOps  | 2      | 2      | 0     | 0      | 0      |
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
 | Python / Django    | 6      | 6      | 0     | 0      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
 | Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **23** | **0** | **11** | **16** |
+| **Total**          | **50** | **24** | **0** | **10** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
-2. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-3. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-4. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
+2. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+3. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
