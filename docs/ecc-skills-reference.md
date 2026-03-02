@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 17 skills, 10 agents, 6 rules
+**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 18 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -114,7 +114,7 @@ Claude Code workflow, session management, and learning patterns.
 | `iterative-retrieval`    | Progressive context retrieval for subagent problem        | Language-agnostic infrastructure pattern. Low priority for PHP-specific toolkit.                              | 💡     |
 | `strategic-compact`      | Manual `/compact` at logical workflow breakpoints         | Language-agnostic session management. Useful for long PHP refactoring or migration sessions.                  | 💡     |
 | `configure-ecc`          | Interactive ECC installer for skill selection             | Internal to ECC. Not applicable to our toolkit (we have `install.sh`).                                        | ➖      |
-| `skill-stocktake`        | Audit skills for quality using checklist + AI judgment    | Could adapt to audit our own PHP skills quality. Useful for maintenance.                                      | 💡     |
+| `skill-stocktake`        | Audit skills for quality using checklist + AI judgment    | Direct analog: `skills/skill-stocktake/` adapted for PHP toolkit — Quick Scan, Full Stocktake, PHP checks.    | ✅      |
 
 ## 8. Domain-Specific
 
@@ -140,12 +140,17 @@ Niche skills for specific use cases.
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
 | Python / Django    | 6      | 6      | 0     | 0      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
-| Meta-Skills        | 7      | 3      | 0     | 2      | 2      |
+| Meta-Skills        | 7      | 4      | 0     | 1      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **27** | **0** | **7** | **16** |
+| **Total**          | **50** | **28** | **0** | **6** | **16** |
 
-## High-Priority Gaps
+## Next Priority Gaps
 
-Skills worth building next, ranked by impact:
+Remaining 💡 ideas worth adapting, ranked by impact:
 
-1. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Backend Patterns** — PHP-specific backend architecture consolidation (from `backend-patterns`)
+2. **Content-Hash Cache** — SHA-256 content-hash caching recipes for PHP (from `content-hash-cache-pattern`)
+3. **Spring Boot Security → PHP** — expand security skill with Sanctum/Gates/Voters patterns (from `springboot-security`)
+4. **Eval Harness** — formal evaluation framework for Claude Code PHP sessions (from `eval-harness`)
+5. **Iterative Retrieval** — progressive context retrieval for subagent workflows (from `iterative-retrieval`)
+6. **Strategic Compact** — manual `/compact` at logical breakpoints in long PHP sessions (from `strategic-compact`)

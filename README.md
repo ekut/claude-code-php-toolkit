@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (17)
+### Skills (18)
 
 | Skill | Description |
 |-------|-------------|
@@ -113,6 +113,7 @@ Customize it for your project's specific needs.
 | [php-security-scanning](skills/php-security-scanning/SKILL.md) | Security scanning pipeline — Composer audit, Psalm taint, PHPStan security, secrets, debug detection |
 | [search-first](skills/search-first/SKILL.md) | Research-before-coding workflow — search Packagist, Spatie, League before writing custom code |
 | [continuous-learning](skills/continuous-learning/SKILL.md) | Auto-extract PHP patterns from sessions — instinct model, confidence scoring, hooks |
+| [skill-stocktake](skills/skill-stocktake/SKILL.md) | Skill quality audit — Quick Scan and Full Stocktake modes, verdicts, consolidation |
 
 ### Commands (3)
 
@@ -214,7 +215,7 @@ skills/
 ├── php-security-scanning/        # Security scanning pipeline
 ├── search-first/                 # Research-before-coding workflow
 ├── continuous-learning/          # Auto-extract patterns from sessions
-
+└── skill-stocktake/             # Skill quality audit framework
 
 contexts/
 ├── php-dev.md             # Development mode
