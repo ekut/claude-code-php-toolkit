@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-02-27 · **ECC skills counted:** 50 · **Our coverage:** 12 skills, 10 agents, 6 rules
+**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 13 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -69,7 +69,7 @@ Closest analog to the PHP/Symfony ecosystem — highest idea-transfer value.
 | `springboot-patterns`     | Spring Boot architecture: REST, services, caching, async | Partial analog: `skills/symfony-patterns/` covers Symfony equivalents. Laravel patterns skill would complete coverage. | ✅      |
 | `springboot-security`     | Spring Security: authn/authz, CSRF, rate limiting        | Ideas transfer well to Symfony Security / Laravel Sanctum+Gates. Could expand security skill.                          | 💡     |
 | `springboot-tdd`          | Spring Boot TDD: JUnit 5, Mockito, Testcontainers        | `skills/php-testing/` covers PHPUnit/Pest TDD. Testcontainers idea worth adopting for PHP.                             | ✅      |
-| `springboot-verification` | Build + analysis + tests + security scan pipeline        | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                           | ✅      |
+| `springboot-verification` | Build + analysis + tests + security scan pipeline        | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                          | ✅      |
 | `jpa-patterns`            | JPA/Hibernate: entities, relationships, queries, pooling | Direct analog: `skills/doctrine-orm-patterns/` covers entities, relationships, DQL, migrations, performance.           | ✅      |
 
 ## 5. Python / Django
@@ -80,7 +80,7 @@ Second-closest analog — web framework patterns transferable to Laravel.
 |-----------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------|
 | `python-patterns`     | Pythonic idioms, PEP 8, type hints                          | PHP has its own idioms covered by `skills/php-patterns/`. No direct transfer needed.                            | ✅      |
 | `python-testing`      | pytest, fixtures, mocking, parametrization                  | PHP analog: `skills/php-testing/` covers PHPUnit/Pest equivalents (data providers ≈ parametrize).               | ✅      |
-| `django-patterns`     | Django architecture: DRF, ORM, caching, signals, middleware | Ideas transfer to Laravel: Eloquent, middleware, events, caching. A Laravel patterns skill would capture these. | 💡     |
+| `django-patterns`     | Django architecture: DRF, ORM, caching, signals, middleware | Covered by `skills/laravel-patterns/` — Eloquent, middleware, events, queues, caching, validation, services. | ✅      |
 | `django-security`     | Django security: auth, CSRF, SQLi, XSS prevention           | Already covered by `agents/php-security-reviewer.md` + `rules/php/security.md`.                                 | ✅      |
 | `django-tdd`          | Django testing: pytest-django, factory_boy, DRF tests       | Concepts covered by `skills/php-testing/`. Factory pattern → use with `fakerphp/faker`.                         | ✅      |
 | `django-verification` | Django verification: migrations, linting, tests, security   | Direct analog: `skills/php-verification/` covers the equivalent PHP pipeline.                                   | ✅      |
@@ -138,19 +138,18 @@ Niche skills for specific use cases.
 | Testing & Quality  | 4      | 4      | 0     | 0      | 0      |
 | Security & DevOps  | 2      | 1      | 0     | 1      | 0      |
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
-| Python / Django    | 6      | 5      | 0     | 1      | 0      |
+| Python / Django    | 6      | 6      | 0     | 0      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
 | Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **21** | **0** | **13** | **16** |
+| **Total**          | **50** | **22** | **0** | **12** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **Laravel Patterns** — routes, Eloquent, middleware, events, queues (from `springboot-patterns`, `django-patterns`)
-2. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
-3. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
-4. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-5. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-6. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **PHP API Design** — REST conventions, API Platform, Laravel API Resources (from `api-design`)
+2. **PHP Security Scanning** — `composer audit`, Psalm taint analysis, Roave advisories (from `security-scan`)
+3. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
+4. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+5. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
