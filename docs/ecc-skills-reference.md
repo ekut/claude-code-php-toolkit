@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 16 skills, 10 agents, 6 rules
+**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 17 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -109,8 +109,8 @@ Claude Code workflow, session management, and learning patterns.
 | ECC Skill                | Purpose                                                   | PHP Relevance                                                                                                 | Status |
 |--------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------|
 | `search-first`           | Research-before-coding workflow                           | Direct analog: `skills/search-first/` adapted for PHP — Packagist, Spatie, League, Symfony components. | ✅      |
-| `continuous-learning`    | Extract reusable patterns from sessions as skills         | Language-agnostic. Could adapt for PHP toolkit — auto-discover PHP patterns during sessions.                  | 💡     |
-| `continuous-learning-v2` | Instinct-based learning with hooks and confidence scoring | Advanced version of above. Same applicability — language-agnostic system.                                     | 💡     |
+| `continuous-learning`    | Extract reusable patterns from sessions as skills         | Direct analog: `skills/continuous-learning/` adapted for PHP — session evaluation, PHP pattern types.         | ✅      |
+| `continuous-learning-v2` | Instinct-based learning with hooks and confidence scoring | Covered by `skills/continuous-learning/` which combines v1 and v2 approaches with PHP-specific instincts.     | ✅      |
 | `iterative-retrieval`    | Progressive context retrieval for subagent problem        | Language-agnostic infrastructure pattern. Low priority for PHP-specific toolkit.                              | 💡     |
 | `strategic-compact`      | Manual `/compact` at logical workflow breakpoints         | Language-agnostic session management. Useful for long PHP refactoring or migration sessions.                  | 💡     |
 | `configure-ecc`          | Interactive ECC installer for skill selection             | Internal to ECC. Not applicable to our toolkit (we have `install.sh`).                                        | ➖      |
@@ -140,13 +140,12 @@ Niche skills for specific use cases.
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
 | Python / Django    | 6      | 6      | 0     | 0      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
-| Meta-Skills        | 7      | 1      | 0     | 4      | 2      |
+| Meta-Skills        | 7      | 3      | 0     | 2      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **25** | **0** | **9** | **16** |
+| **Total**          | **50** | **27** | **0** | **7** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-2. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
