@@ -9,7 +9,7 @@ Cross-reference of all [everything-claude-code](https://github.com/affaan-m/ever
 > approach the PHP ecosystem. Thank you for setting the bar and making it
 > open source.
 
-**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 15 skills, 10 agents, 6 rules
+**Last audit:** 2026-03-02 · **ECC skills counted:** 50 · **Our coverage:** 16 skills, 10 agents, 6 rules
 
 ## Status Legend
 
@@ -108,7 +108,7 @@ Claude Code workflow, session management, and learning patterns.
 
 | ECC Skill                | Purpose                                                   | PHP Relevance                                                                                                 | Status |
 |--------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------|
-| `search-first`           | Research-before-coding workflow                           | Language-agnostic methodology. Worth adapting: search Packagist/existing packages before writing custom code. | 💡     |
+| `search-first`           | Research-before-coding workflow                           | Direct analog: `skills/search-first/` adapted for PHP — Packagist, Spatie, League, Symfony components. | ✅      |
 | `continuous-learning`    | Extract reusable patterns from sessions as skills         | Language-agnostic. Could adapt for PHP toolkit — auto-discover PHP patterns during sessions.                  | 💡     |
 | `continuous-learning-v2` | Instinct-based learning with hooks and confidence scoring | Advanced version of above. Same applicability — language-agnostic system.                                     | 💡     |
 | `iterative-retrieval`    | Progressive context retrieval for subagent problem        | Language-agnostic infrastructure pattern. Low priority for PHP-specific toolkit.                              | 💡     |
@@ -140,14 +140,13 @@ Niche skills for specific use cases.
 | Java / Spring Boot | 6      | 5      | 0     | 1      | 0      |
 | Python / Django    | 6      | 6      | 0     | 0      | 0      |
 | Other Languages    | 10     | 0      | 0     | 0      | 10     |
-| Meta-Skills        | 7      | 0      | 0     | 5      | 2      |
+| Meta-Skills        | 7      | 1      | 0     | 4      | 2      |
 | Domain-Specific    | 5      | 1      | 0     | 1      | 3      |
-| **Total**          | **50** | **24** | **0** | **10** | **16** |
+| **Total**          | **50** | **25** | **0** | **9** | **16** |
 
 ## High-Priority Gaps
 
 Skills worth building next, ranked by impact:
 
-1. **Search-First Workflow** — research Packagist, existing packages, and proven patterns before writing custom code (from `search-first`)
-2. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
-3. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)
+1. **Continuous Learning** — auto-extract reusable PHP patterns from Claude Code sessions and evolve them into skills (from `continuous-learning`, `continuous-learning-v2`)
+2. **Skill Stocktake** — quality audit framework for our own skills: completeness, accuracy, code examples (from `skill-stocktake`)

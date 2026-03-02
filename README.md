@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (15)
+### Skills (16)
 
 | Skill | Description |
 |-------|-------------|
@@ -111,6 +111,7 @@ Customize it for your project's specific needs.
 | [laravel-patterns](skills/laravel-patterns/SKILL.md) | Laravel 10+/11+ architecture — routing, Eloquent, middleware, events, queues, validation |
 | [php-api-design](skills/php-api-design/SKILL.md) | REST API design — resource naming, status codes, pagination, versioning, rate limiting |
 | [php-security-scanning](skills/php-security-scanning/SKILL.md) | Security scanning pipeline — Composer audit, Psalm taint, PHPStan security, secrets, debug detection |
+| [search-first](skills/search-first/SKILL.md) | Research-before-coding workflow — search Packagist, Spatie, League before writing custom code |
 
 ### Commands (3)
 
@@ -210,6 +211,7 @@ skills/
 ├── laravel-patterns/             # Laravel 10+/11+ patterns
 ├── php-api-design/               # REST API design patterns
 ├── php-security-scanning/        # Security scanning pipeline
+├── search-first/                 # Research-before-coding workflow
 
 
 contexts/
