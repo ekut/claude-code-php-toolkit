@@ -37,3 +37,6 @@ psalm-baseline.xml
 
 # Claude Code local settings (personal permissions and MCP config)
 .claude/settings.local.json
+
+# Skill stocktake results (temporary, regenerated on demand)
+skills/skill-stocktake/results.json
