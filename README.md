@@ -92,7 +92,7 @@ Customize it for your project's specific needs.
 | [php-refactor-cleaner](agents/php-refactor-cleaner.md) | Dead code cleanup — unused imports, packages, refactoring |
 | [php-e2e-runner](agents/php-e2e-runner.md) | E2E & integration testing — Symfony, Laravel, framework-agnostic |
 
-### Skills (11)
+### Skills (12)
 
 | Skill | Description |
 |-------|-------------|
@@ -106,6 +106,7 @@ Customize it for your project's specific needs.
 | [php-architecture-action-based](skills/php-architecture-action-based/SKILL.md) | Action-Based — Single-action controllers, ADR, Command/Query |
 | [doctrine-orm-patterns](skills/doctrine-orm-patterns/SKILL.md) | Doctrine ORM 3.x — entities, relationships, DQL, migrations, performance |
 | [doctrine-odm-patterns](skills/doctrine-odm-patterns/SKILL.md) | Doctrine MongoDB ODM — documents, references, query builder, aggregation |
+| [php-deployment](skills/php-deployment/SKILL.md) | Docker, php-fpm, Swoole, FrankenPHP, Deployer, CI/CD, zero-downtime |
 | [symfony-patterns](skills/symfony-patterns/SKILL.md) | Symfony 6+/7+ architecture — service container, autowiring, controllers, events, Messenger |
 
 ### Commands (3)
@@ -201,6 +202,7 @@ skills/
 ├── php-architecture-action-based/ # Action-Based, ADR
 ├── doctrine-orm-patterns/         # Doctrine ORM entities, DQL, migrations
 ├── doctrine-odm-patterns/        # Doctrine MongoDB ODM documents, queries
+├── php-deployment/                # Docker, runtimes, CI/CD, Deployer
 ├── symfony-patterns/              # Symfony 6+/7+ patterns
 └── laravel-eloquent/              # Laravel (future)
 
