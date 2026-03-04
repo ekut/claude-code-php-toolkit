@@ -121,14 +121,28 @@ Customize it for your project's specific needs.
 | [continuous-learning](skills/continuous-learning/SKILL.md) | Auto-extract PHP patterns from sessions — instinct model, confidence scoring, hooks |
 | [skill-stocktake](skills/skill-stocktake/SKILL.md) | Skill quality audit — Quick Scan and Full Stocktake modes, verdicts, consolidation |
 
-### Commands (4)
+### Commands (18)
 
 | Command | Description |
 |---------|-------------|
+| `/audit-packages` | Audit package references against verified-packages.json allowlist |
+| `/php-analyze` | Run PHPStan + PHP-CS-Fixer + Psalm |
+| `/php-build-fix` | Incrementally fix Composer conflicts, autoloading, and build errors |
+| `/php-checkpoint` | Create, verify, and list workflow checkpoints |
+| `/php-evolve` | Cluster related instincts into skills, commands, or agents |
+| `/php-instinct-export` | Export learned instincts to YAML for sharing |
+| `/php-instinct-import` | Import instincts from files or URLs with conflict detection |
+| `/php-instinct-status` | Show instincts grouped by domain with confidence scores |
+| `/php-learn` | Extract reusable patterns from session with self-evaluation |
+| `/php-orchestrate` | Sequential agent workflow: plan, build, test, review, security |
+| `/php-plan` | Create phased implementation plan before coding (read-only) |
+| `/php-refactor-clean` | Detect and remove dead code with test verification |
 | `/php-review` | Comprehensive PHP code review |
 | `/php-tdd` | TDD workflow with PHPUnit or Pest |
-| `/php-analyze` | Run PHPStan + PHP-CS-Fixer + Psalm |
-| `/audit-packages` | Audit package references against verified-packages.json allowlist |
+| `/php-test-coverage` | Analyze coverage gaps, generate missing tests for 80%+ |
+| `/php-update-codemaps` | Generate token-lean architecture documentation |
+| `/php-update-docs` | Sync PHPDoc, env docs, Composer scripts with codebase |
+| `/php-verify` | Full verification pipeline — Composer, syntax, style, analysis, tests, security |
 
 ### Rules (7)
 
