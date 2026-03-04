@@ -13,6 +13,11 @@
             "type": "command",
             "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -q '\\.php$'; then if [ -f vendor/bin/phpstan ]; then vendor/bin/phpstan analyse \"$CLAUDE_FILE_PATH\" --no-progress --error-format=raw 2>/dev/null; fi; fi",
             "timeout": 30000
+          },
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -q '\\.md$'; then php \"${CLAUDE_PLUGIN_ROOT}/hooks/format-md-tables.php\" \"$CLAUDE_FILE_PATH\" 2>/dev/null; fi",
+            "timeout": 5000
           }
         ]
       }

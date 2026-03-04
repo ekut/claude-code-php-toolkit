@@ -142,12 +142,13 @@ Customize it for your project's specific needs.
 | [security](rules/php/security.md) | PDO, htmlspecialchars, password_hash, CSRF |
 | [performance](rules/php/performance.md) | OPcache, generators, N+1 prevention |
 
-### Hooks (2)
+### Hooks (3)
 
 | Hook | Trigger |
 |------|---------|
 | PHP-CS-Fixer on edit | Auto-formats PHP files after Edit/Write |
 | PHPStan on edit | Type-checks PHP files after Edit/Write |
+| Markdown table formatter | Aligns table columns in `.md` files after Edit/Write |
 
 Hooks are auto-loaded from `hooks/hooks.json` by Claude Code (v2.1+). They are **not** declared in `plugin.json` to avoid the duplicate hooks error.
 
