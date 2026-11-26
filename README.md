@@ -1,5 +1,11 @@
 # claude-code-php-toolkit
 
+> [!WARNING]
+> Archived and not maintained. The edit hooks (PHP-CS-Fixer, PHPStan, table formatter) do not run on current Claude
+> Code: they read a `CLAUDE_FILE_PATH` variable that is not set. Do not start sessions with
+> `--system-prompt "$(cat contexts/...)"`: that flag replaces Claude Code's whole system prompt, use
+> `--append-system-prompt`. For PHP diagnostics see the official `php-lsp` plugin. Kept for reference.
+
 Production-ready agents, skills, commands, rules, and hooks for PHP development with [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 Inspired by [everything-claude-code](https://github.com/affaan-m/everything-claude-code), adapted and extended for the PHP ecosystem.
